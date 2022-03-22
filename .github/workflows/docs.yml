@@ -1,0 +1,22 @@
+name: Publish Documentation to dockerhub
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+
+jobs:
+  push_documentation:
+    name: Push Documentation to Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
+      - name: Sync readme to dockerhub
+        uses: meeDamian/sync-readme@v1.0.6
+        with:
+          pass: ${{ secrets.DOCKER_PASSWORD }}
+          slug: arvinsingla/dero-wallet
+          description: true

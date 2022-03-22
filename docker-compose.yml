@@ -1,0 +1,19 @@
+version: '3'
+services:
+  derod:
+    image: arvinsingla/derod:latest
+    restart: unless-stopped
+    container_name: derod
+    tty: true
+    stdin_open: true
+    volumes:
+      - /mnt/dero:/mnt/dero
+    ports:
+      - 10100:10100
+      - 10102:10102
+      - 18090:18090
+    command: >-
+      --data-dir=/mnt/dero
+      --p2p-bind=0.0.0.0:18090
+      --rpc-bind=0.0.0.0:10102
+      --integrator-address YOUR_WALLET_ADDRESS
