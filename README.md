@@ -12,7 +12,7 @@ If you run this container with default settings the integrator address is set to
 
 ## Docker Hub
 
-This repo is used to build the images available at:
+This repo is used to build the images available at: https://github.com/arvinsingla/derod-docker
 
 https://hub.docker.com/r/arvinsingla/derod
 
