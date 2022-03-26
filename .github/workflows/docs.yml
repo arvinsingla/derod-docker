@@ -2,7 +2,7 @@ name: Publish Documentation to dockerhub
 
 on:
   push:
-    branches: [main]
+    branches: [main, latest]
     paths:
       - 'README.md'
 

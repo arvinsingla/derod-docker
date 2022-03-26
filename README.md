@@ -1,6 +1,6 @@
 # Dero Daemon (derod) docker container
 
-A simple docker container for the dero daemon (derod) 
+Unofficial simple docker container for the dero daemon (derod) 
 
 When I say simple, I mean simple. All this docker container does is pull the most recently released binary and pass along whatever derod commands you want and executes them against the binary.
 
